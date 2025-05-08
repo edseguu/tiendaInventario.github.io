@@ -6,6 +6,7 @@ async function startCamera() {
         const constraints = {
             video: {
                 facingMode: "environment", // Usa la cámara trasera
+                focusMode: "continuous", // Modo de enfoque continuo
             },
         };
         const stream = await navigator.mediaDevices.getUserMedia(constraints);
