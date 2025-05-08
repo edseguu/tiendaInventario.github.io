@@ -16,12 +16,15 @@
         </div>
     </header>
     <div id="buttons_inicio">
-        <button id="button_camera">Entradas</button>
+        <button onclick="onScanSuccess()">Entradas</button>
         <button>Salidas</button>
     </div>
-    <video id="video_camera" autoplay></video>
+
+    <div id="reader"></div>
+    <div id="reader__result">
+    </div>
 </body>
 
-
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 <script src="script.js"></script>
 </html>
