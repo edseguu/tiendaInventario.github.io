@@ -1,23 +1,12 @@
-const botonCamera = document.getElementById("button_camera");
-const video = document.getElementById("video_camera");
-
-async function startCamera() {
-    try {
-        const constraints = {
-            video: {
-                facingMode: "environment", // Usa la cámara trasera
-                focusMode: "continuous", // Modo de enfoque continuo
-            },
-        };
-        const stream = await navigator.mediaDevices.getUserMedia(constraints);
-        video.srcObject = stream;
-        video.play();
-    } catch (error) {
-        console.error("Error accessing the camera: ", error);
-    }
+function onScanSuccess(decodedText, decodedResult)
+{
+    console.log(`Code matched = ${decodedText}`, decodedResult);
+    document.getElementById("reader__result").innerHTML = ` Resultado: <b>${decodedText}</b>`;
+}
+function onScanError(errorMessage) {
+  // console.warn(`Scan error: ${errorMessage}`);
 }
 
-botonCamera.addEventListener("click", () => {
-    startCamera();
-    botonCamera.style.display = "none"; // Oculta el botón después de hacer clic
-});
+var html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", { fps: 10, qrbox: {width: 300, height: 120}});
+html5QrcodeScanner.render(onScanSuccess, onScanError);
