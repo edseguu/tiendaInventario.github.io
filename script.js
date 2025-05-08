@@ -3,7 +3,12 @@ const video = document.getElementById("video_camera");
 
 async function startCamera() {
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({video: true,});
+        const constraints = {
+            video: {
+                facingMode: "environment", // Usa la cámara trasera
+            },
+        };
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
         video.srcObject = stream;
         video.play();
     } catch (error) {
