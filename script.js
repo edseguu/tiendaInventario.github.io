@@ -104,7 +104,7 @@ console.log(sessionStorage.getItem('productosSeleccionados'));
 
 
 function enviarData(){
-  fetch("https://script.google.com/macros/s/AKfycbykko1qMU8C-n7kkHA7Iph4W0aAGdrvSAsS03O9FumxLzSmen5_wpkp6TTVnLo6Hx9o2A/exec", {
+  fetch("https://edseguu.app.n8n.cloud/webhook-test/aa098a56-8811-48e5-8646-265deaf3ff67", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
