@@ -10,21 +10,26 @@
 <body>
     <header id="header">
         <div id="header_buttons">
-            <button>Inicio</button>
-            <button type="menu">Menú</button>
+            <button onclick="pagInicio()">Inicio</button>
+            <button onclick="pagCansta()">Canasta</button>
 
         </div>
     </header>
-    <div id="buttons_inicio">
-        <button onclick="onScanSuccess()">Entradas</button>
-        <button>Salidas</button>
+    <div id="buttons_cat">
+        <button id="cat1" onclick="pagLacteos()">Lacteos</button>
+        <button id="cat2" onclick="pagCarnes()">Carnes</button>
+        <button id="cat3">Aves</button>
+        <button id="cat4">Pescados</button>
+        <button id="cat5">Limpieza</button>
+        <button id="cat6">Abarrotes</button>
+        <button id="cat7">Mascotas</button>
+        <button id="cat8">Dulces</button>
+        <button id="cat9">Bebidas</button>
+        <button id="cat10">Otros</button>
     </div>
 
-    <div id="reader"></div>
-    <div id="reader__result">
-    </div>
 </body>
 
-<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+
 <script src="script.js"></script>
 </html>

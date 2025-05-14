@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="header">
+        <div id="header_buttons">
+            <button onclick="pagInicio()">Inicio</button>
+            <button onclick="pagCansta()">Canasta</button>
+
+        </div>
+    </header>
+
+    <div>
+        <ul id="listaCarnes">
+            <li>
+                <div>
+                    Salchicha fud
+                    <select name="Salchicha fud" class="select" data-product-id="4001"></select>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    Salchicha pavo
+                    <select name="Salchicha pavo" class="select" data-product-id="4002"></select>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    Jamón de pavo San Rafael
+                    <select name="Jamón de pavo San Rafael" class="select" data-product-id="4003"></select>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    Jamón de pavo fud
+                    <select name="Jamón de pavo fud" class="select" data-product-id="4004"></select>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    <button id="button_add" onclick="addProducto()">Añadir</button>
+    
+</body>
+
+<script src="script.js"></script>
+</html>
