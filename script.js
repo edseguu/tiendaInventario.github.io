@@ -103,8 +103,31 @@ function borrarData(){
 console.log(sessionStorage.getItem('productosSeleccionados'));
 
 
-function enviarData(){
-  fetch("https://edseguu.app.n8n.cloud/webhook-test/aa098a56-8811-48e5-8646-265deaf3ff67", {
+function enviarDataSuma(){
+  fetch("http://localhost:5678/webhook-test/d891c4aa-b1e1-4b0e-a8b3-5550a19ede5d", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(productosData)
+  })
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Error en la solicitud');
+  }
+  return response.json();
+})
+.then(data => {
+  console.log('Respuesta del servidor:', data);
+})
+.catch(error => {
+  console.error('Hubo un problema con la petición:', error);
+});
+}
+
+
+function enviarDataResta(){
+  fetch("http://localhost:5678/webhook-test/d891c4aa-b1e1-4b0e-a8b3-5550a19ede5c", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
